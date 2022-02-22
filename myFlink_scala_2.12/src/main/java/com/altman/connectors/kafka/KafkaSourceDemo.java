@@ -20,7 +20,7 @@ import java.util.HashMap;
  * 你能看到一共打印了10条记录，每个kafka分区5条
  * @author : Altman
  */
-public class KakfkaSourceDemo {
+public class KafkaSourceDemo {
     public static void main(String[] args) throws Exception {
         HashMap<TopicPartition, Long> topicPartitionOffset = new HashMap<TopicPartition, Long>();
         //设置读取0,1分区，且读到offset为5时结束，必须为所有的分区指定，否则会抛出异常
