@@ -37,8 +37,8 @@ public class FlinkCDC {
                 .password("000000")
                 .databaseList("gmall-210325-flink")
                 .tableList("gmall-210325-flink.z_user_info")   //如果不添加该参数,则消费指定数据库中所有表的数据.如果指定,指定方式为db.table
-                .deserializer(new StringDebeziumDeserializationSchema())
-                .startupOptions(StartupOptions.initial())
+                .deserializer(new StringDebeziumDeserializationSchema()) 
+                .startupOptions(StartupOptions.initial()) //initial:先全量快照再接着读最新的binlog数据；earlist：要先启动binlog再建库表才能使用；latest：从连接之后产生的最新binlog读取数据
                 .build();
         DataStreamSource<String> streamSource = env.addSource(sourceFunction);
 
