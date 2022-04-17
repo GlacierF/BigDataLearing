@@ -3,20 +3,20 @@
 计算引擎：hive、spark、flink
 
 
-提交代码
+提交代码  
  git status -sb  
  git add -A
  git commit -m "fix"  
  git push origin dev_20190510001  
 
-查询状态
+查询状态    
 git status    
 
-查看日志
+查看日志  
  git log --stat  
  git reflog --date=iso  
 
-建立分支
+建立分支  
  git status -sb  
  git checkout -B tob_shenzhen_data    
  git push  
